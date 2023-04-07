@@ -1,0 +1,24 @@
+parameterized constructor
+
+- the constructor that can able to take argument are called parameterized constructor
+
+ch 1
+
+
+Q.1 object oriented paradigms
+- object oriented paradigms let down is build of the foundation let by the structure programming concepts and data-abstraction.
+- data abstraction does for data what function abstraction does for function.
+
+
+Q.2 Application OOP
+
+
+Q.3 structure of C++
+
+Q.4 Namespace 
+
+Namespace are used to organized the classes its helps control the scope of matter and classes in large .dot programming project. simply you can say that it provide one set of name (class) in a different form.
+
+Q.5 Write a programme of namespace in C++
+
+
