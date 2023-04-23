@@ -5,25 +5,28 @@
         // console.log("Handle Event clicked by user" + text);
         let newText = text.toUpperCase();
         setText(newText);
+        props.showAlert("Converted to UpperCase.", "success");
     };
-
+    
     //for lowerCase
-
+    
     const handleLoClick = () => {
         // console.log("Handle Event clicked by user" + text);
         let newText = text.toLowerCase();
         setText(newText);
+        props.showAlert("Converted to LowerCase.", "success");
     };
-
+    
     //for clearing text
     const handleClearClick = () => {
         // console.log("Handle Event clicked by user" + text);
         let newText = "";
         setText(newText);
+        props.showAlert("text cleared!", "success");
     };
-
+    
     //aa onchange event thi aapde textarea ma typing kari sakiae chhe
-
+    
     const handleOnChange = (event) => {
         // console.log("handle On Change");
         setText(event.target.value);
@@ -36,13 +39,15 @@
         var text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Copied to Clipboard!", "success");
     };
-
+    
     //for remove extra space
-
+    
     const handleExtraSpace = () => {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
+        props.showAlert("Extra space removed!", "success");
     };
 
     //speak the text by google
@@ -51,7 +56,7 @@
         msg.text = text;
         window.speechSynthesis.speak(msg);
         const toggle = document.getElementById("toggle");
-        if (toggle.textContent == "Speak") {
+        if (toggle.textContent === "Speak") {
         toggle.innerHTML = "Stop";
         } else {
         toggle.innerHTML = "Speak";
@@ -74,7 +79,7 @@
             <h1>{props.heading}</h1>
 
             <textarea
-                className="form-control"
+                className="form-control outline"
                 value={text}
                 onChange={handleOnChange}
                 id="myBox"

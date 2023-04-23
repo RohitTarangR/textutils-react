@@ -3,10 +3,10 @@ import React,  { useState } from 'react'
 
 export default function About() {
 
-    // const [myStyle, setMyStyle] = useState({
-    //     color: 'black',
-    //     backgroundColor: 'white'
-    // })
+    const [myStyle, setMyStyle] = useState({
+        color: 'black',
+        backgroundColor: 'white'
+    })
 
     const [btntext, setBtnText] = useState("Enable Dark Mode")
 
